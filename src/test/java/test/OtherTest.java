@@ -24,12 +24,17 @@
 
 package test;
 
+import static org.junit.Assert.assertTrue;
+
+import com.mkentaro.example.Base;
+
 import org.junit.Test;
 
-public class OtherTest extends Base {
+public class OtherTest {
 
     @Test public void mytest() {
-        run();
+        Base base = new Base();
+        assertTrue(base.run());
     }
 
 }
