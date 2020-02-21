@@ -22,20 +22,18 @@
  * THE SOFTWARE.
  */
 
-package test;
+package com.mkentaro.example;
 
-import static org.junit.Assert.*;
-import org.junit.internal.AssumptionViolatedException;
+public class Base {
 
-class Base {
+    public Base() {}
 
-    protected void run() {
+    public boolean run() {
         double r = Math.random();
         if (r < 0.1) {
-            fail("oops");
-        } else if (r < 0.2) {
-            throw new AssumptionViolatedException("skipping");
+            return true; 
         }
+        return true;
     }
 
 }
